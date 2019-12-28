@@ -9,7 +9,7 @@ public class OneMore {
 	static int b=1;
 	public OneMore(int a){
 		b = a;
-		
+		a = 0;
 	}
 	
 	public static void main(String[] args) throws InterruptedException {
