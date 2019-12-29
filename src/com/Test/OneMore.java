@@ -1,28 +1,37 @@
 package com.Test;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-public class OneMore {
-	static int b=1;
-	public OneMore(int a){
-		b = a;
-		a = 0;
-	}
-	
+class Parent {
+		void show(int a) {
+			System.out.println("Parent Show"+a);
+		}
+}
+
+class Child  extends Parent{
+		void show(String a) {
+			System.out.println("Child Show");
+		}
+}
+
+
+
+class OneMore {
+	int a,b;
 	public static void main(String[] args) throws InterruptedException {
 		
 		//OneMore on = new OneMore();
 		try{
-
-			OneMore ob1 = new OneMore(2);
-			OneMore ob2 = new OneMore(3);
-			display();
-			OneMore.display();
-			ob2.display();
-			System.out.println("Constructor");
+			int d[]  = new int[2];
+			OneMore om = new OneMore();
+			d = om.setData(2, 3);
+			System.out.println(d[0]);
+			System.out.println(d[1]);
+			om.showData();		
+			
 			
 			
 			
@@ -33,15 +42,17 @@ public class OneMore {
 		}
 		
 	}
-	
-	public static void display() {
-		
-		System.out.println("Value of integer b is: "+b);
-	}
-	public static  int getSum(int a,int b) {
-		int c= a +b;
+	int[] setData(int a, int b) {
+		a=a;
+		b=b;
+		int c[]  =  new int[2];
+		c[0] = a;
+		c[1] = b;
 		return c;
-		
 	}
-
+	void showData() {
+		System.out.println("Value of a : "+a);
+		System.out.println("Value of a : "+b);
+	}
+	
 }

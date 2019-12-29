@@ -8,7 +8,7 @@ class NewTest {
 
 //Static function declared to find 
 //the encrypted string 
-	public static void findWord(String c, int n) { 
+	public void findWord(String c, int n) { 
 		int co = 0, i; 
 
 		// Character array to store 
@@ -33,9 +33,4 @@ class NewTest {
 		System.out.println(str); 
 	} 
 
-	//Driver code 
-//	public static void main(String args[]) { 
-//		String s = "abcd"; 
-//		findWord(s, s.length()); 
-//	} 
 } 
